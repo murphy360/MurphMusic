@@ -45,6 +45,8 @@ public class GenreAdapter extends BaseAdapter {
                     .findViewById(R.id.grid_item_image);
 
             //to retrieve image in res/drawable and set image in ImageView
+            //TODO Figure out efficient image allocation... this area will run into issues allocating images
+
             String imageName = genreValues[position][1];
             int resID = context.getResources().getIdentifier(imageName, "drawable", "com.andrios.murphmusic");
 
