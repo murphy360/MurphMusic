@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MurphMusic</string>
+    <string name="app_name_space">Murph Music</string>
+    <string name="label_splash">splash</string>
+</resources>
