@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.andrios.murphmusic.GenreActivity">
+    tools:context="com.andrios.murphmusic.PlayActivity">
 
     <ImageView
         android:layout_width="match_parent"

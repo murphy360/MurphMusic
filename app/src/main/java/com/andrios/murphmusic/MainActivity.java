@@ -41,7 +41,12 @@ public class MainActivity extends AppCompatActivity {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(view.getContext(), " I did it", Toast.LENGTH_SHORT).show();
+                Toast.makeText(view.getContext(), "" + view.getTag(), Toast.LENGTH_SHORT).show();
+                Intent genreIntent = new Intent(MainActivity.this, GenreActivity.class);
+
+                genreIntent.putExtra("id", view.getTag()+"");
+
+                startActivity(genreIntent);
 
             }
         });

@@ -9,7 +9,7 @@
     android:orientation="vertical"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/mainscreen"
-    tools:context="com.andrios.murphmusic.MainActivity">
+    tools:context="com.andrios.murphmusic.SplashActivity">
 
     <TextView
         android:layout_width="match_parent"
