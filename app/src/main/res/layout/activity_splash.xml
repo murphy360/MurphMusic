@@ -26,5 +26,10 @@
         android:id="@+id/progressBar"
         android:indeterminate="true"
         android:layout_marginTop="56dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hurdle_splash"
+        android:textColor="@android:color/white"/>
 
 </LinearLayout>

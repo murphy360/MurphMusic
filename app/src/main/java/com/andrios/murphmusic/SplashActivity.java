@@ -15,26 +15,23 @@ public class SplashActivity extends AppCompatActivity {
     ProgressBar progressBar;
     int progress = 0;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
         setOnClickListeners();
-
         new BackgroundAsyncTask().execute();
-
-
-
     }
 
+    //Connect GUI and ACTIVITY
     private void setOnClickListeners() {
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         progressBar.setMax(100);
         progressBar.setIndeterminate(false);
 
     }
-
+    // Work in another thread
     public class BackgroundAsyncTask extends
             AsyncTask<Void, Integer, Void> {
 
@@ -42,22 +39,23 @@ public class SplashActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Void result) {
+            //Close the activity
             finish();
         }
 
         @Override
         protected void onPreExecute() {
-            // TODO Auto-generated method stub
-
+            // TODO Fill this out someday
         }
 
         @Override
         protected Void doInBackground(Void... params) {
-            // TODO Auto-generated method stub
+            // Slows down progress bar process to give user time to read about the activity.
+            // TODO Will be used to download data in the background in the future.
             while (myProgress < 100) {
                 myProgress++;
                 publishProgress(myProgress);
-                SystemClock.sleep(10);
+                SystemClock.sleep(50);
             }
             return null;
         }
@@ -67,6 +65,5 @@ public class SplashActivity extends AppCompatActivity {
             // TODO Auto-generated method stub
             progressBar.setProgress(values[0]);
         }
-
     }
 }

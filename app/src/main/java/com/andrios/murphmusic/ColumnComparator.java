@@ -4,8 +4,10 @@ import java.util.Comparator;
 
 /**
  * Created by Corey on 7/24/2016.
+ *
+ * Class that extends Comparator.
  */
-//Class that extends Comparator
+
 class ColumnComparator implements Comparator {
     int columnToSort;
     ColumnComparator(int columnToSort) {

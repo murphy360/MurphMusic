@@ -13,10 +13,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
     GridView gridView;
     AndriosData data;
-
     String[][] genres;
 
     @Override
@@ -25,9 +23,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         splash();
         setConnections();
-
-
-
     }
 
     private void setConnections() {
@@ -35,27 +30,24 @@ public class MainActivity extends AppCompatActivity {
         genres = data.getGenres();
 
         gridView = (GridView) findViewById(R.id.gridView);
-
         gridView.setAdapter(new GenreAdapter(this, genres));
-        
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(view.getContext(), "" + view.getTag(), Toast.LENGTH_SHORT).show();
                 Intent genreIntent = new Intent(MainActivity.this, GenreActivity.class);
-
                 genreIntent.putExtra("id", view.getTag()+"");
-
                 startActivity(genreIntent);
-
             }
         });
     }
 
+    /**
+     * Start splash activity.
+     * SplashActivity will download necessary data at program start.
+     */
     private void splash() {
-
         Intent splashIntent = new Intent(MainActivity.this, SplashActivity.class);
-
         // Start the new activity
         startActivity(splashIntent);
 

@@ -13,6 +13,9 @@ public class PlayActivity extends AppCompatActivity {
         setConnections();
     }
 
+    /**
+     * Connect GUI to ACTIVITY
+     */
     private void setConnections() {
 
 
