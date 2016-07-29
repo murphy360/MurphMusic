@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * Created by Corey on 7/22/2016.
+ * This class is used to create dummy and real data for my application.
  */
 public class AndriosData {
     private String[][] genres = new String[6][2];

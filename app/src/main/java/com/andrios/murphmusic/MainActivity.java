@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(view.getContext(), "" + view.getTag(), Toast.LENGTH_SHORT).show();
                 Intent genreIntent = new Intent(MainActivity.this, GenreActivity.class);
                 genreIntent.putExtra("id", view.getTag()+"");
+
                 startActivity(genreIntent);
             }
         });

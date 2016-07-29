@@ -5,7 +5,7 @@ import java.util.Comparator;
 /**
  * Created by Corey on 7/24/2016.
  *
- * Class that extends Comparator.
+ * Class that extends Comparator. Used to sort String objects
  */
 
 class ColumnComparator implements Comparator {

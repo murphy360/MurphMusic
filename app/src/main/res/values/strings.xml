@@ -3,12 +3,12 @@
     <string name="app_name_space">Murph Music</string>
     <string name="label_splash">splash</string>
     <string name="label_play">play</string>
-    <string name="hurdle_splash">Initiate and download initial data while giving the user some eye candy. I use AndriosData to build
+    <string name="hurdle_splash">SPLASH ACTIVITY \n\nInitiate and download initial data while giving the user some eye candy. I use AndriosData to build
         dummy data and will eventually flesh it out to provide back end interfaces.
     </string>
-    <string name="hurdle_main">Need to efficiently handle images. Running into memory issues.</string>
+    <string name="hurdle_main">MAIN ACTIVITY\n\nNeed to efficiently handle images. Running into memory issues.</string>
 
-    <string name="hurdle_genre">This should shuffle music from this genre. Need to download music and cover art.
+    <string name="hurdle_genre">GENRE ACTIVITY\n\nThis should shuffle music from this genre. Need to download music and cover art.
         This app is designed to shuffle random music from a genre for a user.  X prevents a song from being played again.
     </string>
 </resources>
