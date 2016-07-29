@@ -12,9 +12,7 @@ public class GenreActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
-        
         setConnections();
-        
     }
 
     private void setConnections() {
@@ -39,13 +37,9 @@ public class GenreActivity extends AppCompatActivity {
                 case "Reggae": genreImage = "button_reggae";
                     break;
             }
-
             ImageView imageView = (ImageView) findViewById(R.id.genreImageView);
             int resID = getResources().getIdentifier(genreImage, "drawable", getPackageName());
             imageView.setImageResource(resID);
-
         }
-
-
     }
 }

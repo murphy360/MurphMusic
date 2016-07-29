@@ -35,9 +35,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(view.getContext(), "" + view.getTag(), Toast.LENGTH_SHORT).show();
+
+               //Create intent, put name as extra and start activity
                 Intent genreIntent = new Intent(MainActivity.this, GenreActivity.class);
                 genreIntent.putExtra("id", view.getTag()+"");
-
                 startActivity(genreIntent);
             }
         });

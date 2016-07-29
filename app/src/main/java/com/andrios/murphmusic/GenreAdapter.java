@@ -31,11 +31,9 @@ public class GenreAdapter extends BaseAdapter {
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View gridView;
-
         if (convertView == null) {
             String imageName = genreValues[position][1];
             String genreName = genreValues[position][0];
-            gridView = new View(context);
             // get layout from list_item_genre.xml
             gridView = inflater.inflate(R.layout.list_item_genre, null);
             // set value into textview
@@ -49,7 +47,6 @@ public class GenreAdapter extends BaseAdapter {
             //TODO Figure out efficient image allocation... this area will run into issues allocating images
 
             int resID = context.getResources().getIdentifier(imageName, "drawable", "com.andrios.murphmusic");
-
             imageView.setImageResource(resID );
             gridView.setTag(genreName);
         } else {
